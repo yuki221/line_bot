@@ -35,7 +35,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
@@ -44,13 +43,18 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production do
-  gem 'pg', '0.20.0'
-end
 
 gem 'line-bot-api'
 gem 'dotenv-rails'
 gem 'bootsnap'
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '0.20.0'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
